@@ -18,7 +18,7 @@ public class FigureSupplier {
 
     }
 
-    Figure getDefaultFigure() {
+    public Figure getDefaultFigure() {
         double radius = 10;
         String color = "WHITE";
         return new Circle(radius, color);
@@ -37,9 +37,9 @@ public class FigureSupplier {
                 double height = random.nextDouble() * MAX_SIDE + MIN_SIDE;
                 return new IsoscelesTrapezoid(color, topBase, bottomBase, height);
             case 2:
-                double lenght = random.nextDouble() * MAX_SIDE + MIN_SIDE;
+                double length = random.nextDouble() * MAX_SIDE + MIN_SIDE;
                 double width = random.nextDouble() * MAX_SIDE + MIN_SIDE;
-                return new Rectangle(color, lenght, width);
+                return new Rectangle(color, length, width);
             case 3:
                 double firstLeg = random.nextDouble() * MAX_SIDE + MIN_SIDE;
                 double secondLeg = random.nextDouble() * MAX_SIDE + MIN_SIDE;

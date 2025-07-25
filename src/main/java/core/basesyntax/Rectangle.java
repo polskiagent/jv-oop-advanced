@@ -7,8 +7,8 @@ public class Rectangle implements Figure {
 
     public Rectangle(String color, double length, double width) {
         this.color = color;
-        this.width = width;
         this.length = length;
+        this.width = width;
     }
 
     @Override

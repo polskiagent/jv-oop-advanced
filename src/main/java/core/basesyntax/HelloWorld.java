@@ -7,20 +7,19 @@ public class HelloWorld {
     public static void main(String[] args) {
         Figure[] figures = new Figure[6];
         ColorSupplier colorSupplier = new ColorSupplier();
-        FigureSupplier figureSupplier = new FigureSupplier(); {
+        FigureSupplier figureSupplier = new FigureSupplier();
 
-            for (int i = 0; i < figures.length / 2; i++) {
-                figures[i] = figureSupplier.getRandomFigure();
-            }
-
-            for (int i = figures.length / 2; i < figures.length; i++) {
-                figures[i] = figureSupplier.getDefaultFigure();
-            }
-
-            for (int i = 0; i < figures.length; i++) {
-                figures[i].draw();
-            }
-
+        for (int i = 0; i < figures.length / 2; i++) {
+            figures[i] = figureSupplier.getRandomFigure();
         }
+
+        for (int i = figures.length / 2; i < figures.length; i++) {
+            figures[i] = figureSupplier.getDefaultFigure();
+        }
+
+        for (int i = 0; i < figures.length; i++) {
+            figures[i].draw();
+        }
+
     }
 }
