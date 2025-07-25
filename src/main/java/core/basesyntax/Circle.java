@@ -1,17 +1,17 @@
 package core.basesyntax;
 
-public class Circle implements Figure{
+public class Circle implements Figure {
     private double radius;
     private String color;
-
-    @Override
-    public double getArea() {
-        return Math.PI * radius * radius;
-    }
 
     public Circle(double radius, String color) {
         this.radius = radius;
         this.color = color;
+    }
+
+    @Override
+    public double getArea() {
+        return Math.PI * radius * radius;
     }
 
     @Override

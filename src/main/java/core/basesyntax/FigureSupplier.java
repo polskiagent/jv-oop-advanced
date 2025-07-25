@@ -6,22 +6,22 @@ public class FigureSupplier {
     private static final int FIGURE_TYPES = 5;
     private static final double MIN_SIDE = 1.0;
     private static final double MAX_SIDE = 10.0;
-    Random random = new Random();
+    private Random random = new Random();
     private ColorSupplier colorSupplier;
 
     public FigureSupplier(ColorSupplier colorSupplier) {
         this.colorSupplier = colorSupplier;
     }
 
-    private Figure getDefaultFigure() {
-        double radius = 10;
-        String color = "WHITE";
-        return new Circle(radius, color);
-    }
-
     public FigureSupplier() {
         colorSupplier = new ColorSupplier();
 
+    }
+
+    Figure getDefaultFigure() {
+        double radius = 10;
+        String color = "WHITE";
+        return new Circle(radius, color);
     }
 
     public Figure getRandomFigure() {
@@ -47,8 +47,9 @@ public class FigureSupplier {
             case 4:
                 double radius = random.nextDouble() * MAX_SIDE + MIN_SIDE;
                 return new Circle(radius, color);
+            default:
+                return getDefaultFigure();
         }
-        return getDefaultFigure();
     }
 
 }

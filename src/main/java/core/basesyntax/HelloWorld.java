@@ -8,10 +8,19 @@ public class HelloWorld {
         Figure[] figures = new Figure[6];
         ColorSupplier colorSupplier = new ColorSupplier();
         FigureSupplier figureSupplier = new FigureSupplier(); {
-            for(int i = 0; i < figures.length / 2; i++) {
+
+            for (int i = 0; i < figures.length / 2; i++) {
                 figures[i] = figureSupplier.getRandomFigure();
             }
+
+            for (int i = figures.length / 2; i < figures.length; i++) {
+                figures[i] = figureSupplier.getDefaultFigure();
+            }
+
+            for (int i = 0; i < figures.length; i++) {
+                figures[i].draw();
+            }
+
         }
     }
-
 }
