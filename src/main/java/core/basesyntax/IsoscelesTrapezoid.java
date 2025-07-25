@@ -6,11 +6,11 @@ public class IsoscelesTrapezoid implements Figure {
     private double bottomBase;
     private double height;
 
-    public IsoscelesTrapezoid(String color, double topBase, double bottomBase, double height) {
-        this.color = color;
+    public IsoscelesTrapezoid(double topBase, double bottomBase, double height, String color) {
         this.topBase = topBase;
         this.bottomBase = bottomBase;
         this.height = height;
+        this.color = color;
     }
 
     @Override

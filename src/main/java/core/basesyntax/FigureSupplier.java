@@ -35,11 +35,11 @@ public class FigureSupplier {
                 double topBase = random.nextDouble() * MAX_SIDE + MIN_SIDE;
                 double bottomBase = random.nextDouble() * MAX_SIDE + MIN_SIDE;
                 double height = random.nextDouble() * MAX_SIDE + MIN_SIDE;
-                return new IsoscelesTrapezoid(color, topBase, bottomBase, height);
+                return new IsoscelesTrapezoid(topBase, bottomBase, height, color);
             case 2:
                 double length = random.nextDouble() * MAX_SIDE + MIN_SIDE;
                 double width = random.nextDouble() * MAX_SIDE + MIN_SIDE;
-                return new Rectangle(color, length, width);
+                return new Rectangle(length, width, color);
             case 3:
                 double firstLeg = random.nextDouble() * MAX_SIDE + MIN_SIDE;
                 double secondLeg = random.nextDouble() * MAX_SIDE + MIN_SIDE;

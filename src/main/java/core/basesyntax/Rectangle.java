@@ -5,10 +5,10 @@ public class Rectangle implements Figure {
     private double width;
     private double length;
 
-    public Rectangle(String color, double length, double width) {
-        this.color = color;
+    public Rectangle(double length, double width, String color) {
         this.length = length;
         this.width = width;
+        this.color = color;
     }
 
     @Override
